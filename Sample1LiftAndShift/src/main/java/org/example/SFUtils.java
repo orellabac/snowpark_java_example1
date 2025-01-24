@@ -35,6 +35,9 @@ public class SFUtils {
         Map<String, String> configMap = new HashMap<>() {{
             put("URL", getEnv("SNOWSQL_ACCOUNT") + ".snowflakecomputing.com");
             put("USER", getEnv("SNOWSQL_USER"));
+            // If you want to use SSO then you can just remove the password setting
+            // and add
+            // put("AUTHENTICATOR","externalbrowser");
             put("PASSWORD", getEnv("SNOWSQL_PWD"));
             put("DB", getEnv("SNOWSQL_DATABASE"));
             put("SCHEMA", getEnv("SNOWSQL_SCHEMA"));
